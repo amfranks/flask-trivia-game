@@ -1,0 +1,103 @@
+@import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&family=Patrick+Hand&family=Signika+Negative&display=swap');
+
+body {
+    margin: 0 auto;
+    padding: 0;
+    box-sizing: border-box;
+    min-width: 400px;
+    max-width: 980px;
+    height: 100vh;
+    background-color: #f2f7f5;
+}
+
+h1,
+h2 {
+    font-family: 'Amatic SC', cursive;
+    text-align: left;
+    margin-left: 5%;
+}
+
+h1 {
+    font-size: 3rem;
+    margin-bottom: 0;
+}
+
+h2 {
+    font-size: 2rem;
+    margin-top: 0;
+    color: #00473e;
+}
+
+form {
+    font-family: 'Signika Negative', sans-serif;
+    font-size: 1.5rem;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+button {
+    font-family: 'Signika Negative', sans-serif;
+    margin-top: 1rem;
+    margin-bottom: 5rem;
+    border: none;
+    background-color: #faae2b;
+    color: #00473e;
+    padding: 15px 32px;
+    text-align: center;
+    font-size: 2rem;
+    border-radius: 4px;
+    transition: .2s;
+}
+
+button:hover {
+    cursor: pointer;
+    opacity: .75;
+}
+
+hr {
+    margin: 2rem 0;
+}
+
+#question {
+    font-family: 'Patrick Hand', cursive;
+    margin-bottom: 10%;
+    padding-top: 1rem;
+    color: #00473e;
+}
+
+input.question:hover {
+    cursor: pointer;
+}
+
+@media screen and (min-width: 800px) {
+
+    h1,
+    h2 {
+        margin-left: 15%;
+        margin-right: 15%;
+    }
+
+    h1 {
+        font-size: 3rem;
+    }
+
+    h2 {
+        font-size: 2rem;
+    }
+
+    form {
+        font-size: 2rem;
+        margin-left: 15%;
+        margin-right: 15%;
+    }
+
+    hr {
+        margin: 3rem 0;
+    }
+}
+
+@media screen and (min-width: 1300px) {
+    body {
+        margin: 0 auto;
+    }
+}

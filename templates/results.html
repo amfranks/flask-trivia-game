@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trivia Results</title>
+    <link rel="stylesheet" href="../static/results.css">
+</head>
+
+<body>
+    <h1>You got the following questions correctly:</h1>
+
+    <ul>
+        {% for correctAnswer in results[0] %}
+        <li>{{ correctAnswer.getQuestion() |safe }}</li>
+        <p>- <span>{{correctAnswer.getCorrectAnswer() |safe }}</span></p>
+        {% endfor %}
+    </ul>
+
+    <h1>You got the following questions incorrectly:</h1>
+
+    <ul>
+        {% for incorrectAnswer in results[1] %}
+        <li>{{ incorrectAnswer.getQuestion() |safe }}</li>
+        <p>- <span>{{incorrectAnswer.getCorrectAnswer() |safe }}</span></p>
+        {% endfor %}
+    </ul>
+
+    <button><a href="/">Play again?</a></button>
+</body>
+
+</html>

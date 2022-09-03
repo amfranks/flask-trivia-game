@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trivia Game</title>
+    <link rel="stylesheet" href="../static/questions.css">
+</head>
+
+<body>
+    <h1>Test Your Trivia Knowledge</h1>
+    <h2>Category: <span>{{ results[1].getCategory() }}</span></h2>
+
+    <div id="formContainer">
+        <form action="/score" method="POST" required>
+            <hr>
+
+            {% for question in results %}
+            <span>{{ question.getQuestion() |safe }}</span>
+
+            <div id="question">
+                {% for answer in question.getShuffledAnswers() %}
+                <input type="radio" name={{ question.getID() }} value="{{ answer }}" class="question" required>
+                <label>{{ answer |safe }}</label><br>
+                {% endfor %}
+            </div>
+
+            {% endfor %}
+
+            <hr>
+
+            <button type="submit">Score</button>
+        </form>
+    </div>
+</body>
+
+</html>

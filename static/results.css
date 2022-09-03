@@ -1,0 +1,60 @@
+@import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&family=Patrick+Hand&family=Signika+Negative&display=swap'); 
+
+body {
+    margin: 0 auto;
+    padding: 3rem;
+    box-sizing: border-box;
+    max-width: 980px;
+    height: 100vh;
+    background-color: #f2f7f5;
+}
+
+h1 {
+    font-family: 'Amatic SC', cursive;
+    text-align: left;
+    font-size: 3rem;
+} 
+
+button {
+    border: none;
+    margin-top: 3rem;
+    margin-bottom: 5rem;
+}
+
+a {
+    font-family: 'Signika Negative', sans-serif;
+    text-decoration: none;
+    background-color: #faae2b;
+    color: #00473e;
+    padding: 15px 32px;
+    font-size: 2rem;
+    border-radius: 4px;
+    transition: .2s;
+}
+
+a:hover {
+    cursor: pointer;
+    opacity: .75;
+}
+
+hr {
+    margin: 2rem 0;
+}
+
+li {
+    font-family: 'Signika Negative', sans-serif;
+    font-size: 1.5rem;
+    margin-right: 5%;
+} 
+
+p {
+    font-size: 1.5rem;
+    margin-left: 3rem;
+} 
+
+span {
+    font-family: 'Patrick Hand', cursive;
+    margin-bottom: 10%;
+    padding-top: 1rem;
+    color: #00473e;
+}
