@@ -1,4 +1,5 @@
-from flask import Flask, render_template, request
+import os
+from flask import Flask, render_template, request, send_from_directory
 import triviaquestion, triviagame
 
 app = Flask(__name__)
@@ -25,6 +26,10 @@ def scoreGame():
             else:
                 incorrectlyAnsweredQuestions.append(question)
         return render_template('results.html', results=[correctlyAnsweredQuestions, incorrectlyAnsweredQuestions])
+
+@app.route('/favicon.ico')
+def favicon():
+    return send_from_directory(os.path.join(app.root_path, 'static'), 'favicon.ico',mimetype='image/vnd.microsoft.icon')
 
 if __name__ == "__main__":
     app.run()
